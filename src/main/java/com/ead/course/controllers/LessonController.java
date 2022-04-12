@@ -53,7 +53,7 @@ public class LessonController {
         return ResponseEntity.status(HttpStatus.CREATED).body(lessonModel);
     }
 
-    @DeleteMapping("{lessonId}")
+    @DeleteMapping("/{lessonId}")
     public ResponseEntity<Object> deleteLesson(@PathVariable(value = "moduleId") UUID moduleId,
                                                @PathVariable(value = "lessonId") UUID lessonId) {
         Optional<LessonModel> lessonModelOptional = lessonService.findLessonIntoModule(lessonId, moduleId);
@@ -67,7 +67,7 @@ public class LessonController {
         return ResponseEntity.status(HttpStatus.OK).body("Lesson successfully deleted!");
     }
 
-    @PutMapping("{lessonId}")
+    @PutMapping("/{lessonId}")
     public ResponseEntity<Object> updateLesson(@PathVariable(value = "moduleId") UUID moduleId,
                                                @PathVariable(value = "lessonId") UUID lessonId,
                                                @RequestBody @Valid LessonDto lessonDto) {
@@ -92,7 +92,7 @@ public class LessonController {
         return ResponseEntity.status(HttpStatus.OK).body(lessonService.findAllByModule(SpecificationTemplate.lessonModuleId(moduleId).and(spec), pageable));
     }
 
-    @GetMapping("{lessonId}")
+    @GetMapping("/{lessonId}")
     public ResponseEntity<Object> getOneLesson(@PathVariable(value = "moduleId") UUID moduleId,
                                                @PathVariable(value = "lessonId") UUID lessonId) {
         Optional<LessonModel> lessonModelOptional = lessonService.findLessonIntoModule(lessonId, moduleId);
