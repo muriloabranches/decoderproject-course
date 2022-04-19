@@ -22,6 +22,8 @@ spring:
       enabled: Always
   application:
     name: ead-course-service
+  rabbitmq:
+    addresses: 'url'
 
 logging:
   level:

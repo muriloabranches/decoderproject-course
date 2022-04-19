@@ -41,7 +41,7 @@ public class CourseController {
 
         courseValidator.validate(courseDto, errors);
 
-        if(errors.hasErrors()) {
+        if (errors.hasErrors()) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errors.getAllErrors());
         }
 
