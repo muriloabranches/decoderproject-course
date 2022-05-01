@@ -7,5 +7,7 @@ spring:
     config:
       discovery:
         serviceId: ead-config-server
+      username: configserver
+      password: 'ead123cs'
   rabbitmq:
     addresses: 'url'
