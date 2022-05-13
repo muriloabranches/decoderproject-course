@@ -1,0 +1,11 @@
+spring:
+  config:
+    import: 'configserver:'
+  cloud:
+    config:
+      discovery:
+        serviceId: ead-config-server
+      username: configserver
+      password: 'ead123cs'
+  rabbitmq:
+    addresses: amqps://pssszwbo:DkVRQRpDSMu8do3S0d9ZRFkGVFVisJDN@toad.rmq.cloudamqp.com/pssszwbo
