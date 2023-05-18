@@ -8,4 +8,4 @@ spring:
       username: configserver
       password: 'ead123cs'
   rabbitmq:
-    addresses: amqps://pssszwbo:DkVRQRpDSMu8do3S0d9ZRFkGVFVisJDN@toad.rmq.cloudamqp.com/pssszwbo
+    addresses: 'url'
